@@ -9,11 +9,18 @@ void main() {
     double PI = 3.141592;
     int radius; // 원의 반지름
     double area;
+    double boxArea;
+    double result;
 
     System.out.print("원의 반지름 입력 (정수형) ? ");
     radius = keyboard.nextInt();
 
     area = 3.141592 * radius * radius;
 
-    System.out.printf("원의 반지름 : %,d Cm, 면적 : %, .2f \u33A0\n", radius, area);
+    boxArea = radius * radius * radius;
+    result = boxArea - area;
+
+    System.out.printf("원의 반지름 : %,d Cm, 면적 : %,.2f \u33A0\n", radius, area);
+    System.out.printf("정사각형 면적 : %,.2f ㎠\n", boxArea);
+    System.out.printf("구하는 면적 : %,.2f ㎠\n", result);
 }
